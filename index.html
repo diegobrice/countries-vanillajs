@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries API</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/7b5fb2de65.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <h1 class="header__title">Where in the world?</h1>
+      </div>
+    </header>
+    <section class="formulario">
+      <div class="contenedor">
+        <div class="search-box">
+          <form action="">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              name=""
+              id="search-text"
+              placeholder="Search for a country..."
+            />
+          </form>
+        </div>
+        <a href="#" id="btnFiltroAsia">Asia</a>
+        <a href="#" id="btnFiltroAmerica">America</a>
+      </div>
+    </section>
+    <section class="main">
+      <div class="contenedor__main" id="countryContainer">
+        <div class="item">
+          <img
+            class="item__img"
+            src="https://restcountries.eu/data/deu.svg"
+            alt=""
+          />
+          <div class="item__content">
+            <h2 class="item__title">Germany</h2>
+            <ul>
+              <li><span>Population: </span>81,790,000</li>
+              <li><span>Region: </span>Europe</li>
+              <li><span>Capital: </span>Berlin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="contenedor">
+        <p>
+          Developed by
+          <a href="">
+            @diegobrice
+          </a>
+          This is a challenge from
+          <a href="">
+            FrontEnd Mentor
+          </a>
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
