@@ -9,22 +9,23 @@
 
   const countryList = await getData(`${BASE_API}all`);
 
-  function filtrar(parametro) {
+  function filtraRegion(parametro) {
     return countryList.filter((country) => country.region === parametro);
   }
 
-  const $btnFiltroAmerica = document.getElementById("btnFiltroAmerica");
-  $btnFiltroAmerica.addEventListener("click", () => {
-    const filterList = filtrar("Americas");
-    const $countryContainer = document.getElementById("countryContainer");
-    renderCountryList(filterList, $countryContainer);
+  const $btnFilter = document.querySelectorAll(".btnFilter");
+  $btnFilter.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filterList = filtraRegion(btn.dataset.region);
+      renderCountryList(filterList, $countryContainer);
+    });
   });
-  const $btnFiltroAsia = document.getElementById("btnFiltroAsia");
-  $btnFiltroAsia.addEventListener("click", () => {
-    const filterList = filtrar("Asia");
-    const $countryContainer = document.getElementById("countryContainer");
-    renderCountryList(filterList, $countryContainer);
-  });
+
+  // const $btnFiltroAmerica = document.getElementById("btnFiltroAmerica");
+  // $btnFiltroAmerica.addEventListener("click", () => {
+  //   const filterList = filtrar("Americas");
+  //   renderCountryList(filterList, $countryContainer);
+  // });
 
   // const countryRegionEurope = countryList.filter(
   //   (country) => country.region === "Europe"

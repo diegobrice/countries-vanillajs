@@ -6,6 +6,7 @@
     <title>Countries API</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queries.css" />
     <script
       src="https://kit.fontawesome.com/7b5fb2de65.js"
       crossorigin="anonymous"
@@ -18,7 +19,7 @@
       </div>
     </header>
     <section class="formulario">
-      <div class="contenedor">
+      <div class="contenedor__formulario">
         <div class="search-box">
           <form action="">
             <i class="fas fa-search"></i>
@@ -30,8 +31,33 @@
             />
           </form>
         </div>
-        <a href="#" id="btnFiltroAsia">Asia</a>
-        <a href="#" id="btnFiltroAmerica">America</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <div>
+              Filter by Region
+            </div>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#" class="btnFilter" id="btnAfrica" data-region="Africa"
+              >Africa</a
+            >
+            <a href="#" class="btnFilter" id="btnAmerica" data-region="Americas"
+              >America</a
+            >
+            <a href="#" class="btnFilter" id="btnAsia" data-region="Asia"
+              >Asia</a
+            >
+            <a href="#" class="btnFilter" id="btnEurope" data-region="Europe"
+              >Europe</a
+            >
+            <a href="#" class="btnFilter" id="btnOceania" data-region="Oceania"
+              >Oceania</a
+            >
+          </div>
+        </div>
+        <!-- <a href="#" id="btnFiltroAsia">Asia</a>
+        <a href="#" id="btnFiltroAmerica">America</a> -->
       </div>
     </section>
     <section class="main">
@@ -60,6 +86,8 @@
           <a href="">
             @diegobrice
           </a>
+        </p>
+        <p>
           This is a challenge from
           <a href="">
             FrontEnd Mentor

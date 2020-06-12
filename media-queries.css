@@ -1,0 +1,64 @@
+@media screen and (max-width: 1199px) {
+  .contenedor {
+    margin: 0 40px;
+  }
+
+  .contenedor__main {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0 40px;
+  }
+
+  .contenedor__formulario {
+    margin: 0 40PX;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  .contenedor {
+    margin: 0 30px;
+  }
+
+  .contenedor__main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 30px;
+  }
+
+  .contenedor__formulario {
+    margin: 0 30PX;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    margin: 0 20px;
+  }
+
+  .contenedor__formulario {
+    margin: 0 20PX;
+  }
+
+  .contenedor__main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contenedor {
+    margin: 0 20px;
+  }
+
+  .contenedor__main {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin: 0 20px;
+  }
+
+  #search-text {
+    width: 250px;
+  }
+}
