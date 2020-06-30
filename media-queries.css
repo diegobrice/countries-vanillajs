@@ -10,10 +10,9 @@
   }
 
   .contenedor__formulario {
-    margin: 0 40PX;
+    margin: 0 40px;
   }
 }
-
 
 @media screen and (max-width: 980px) {
   .contenedor {
@@ -27,7 +26,7 @@
   }
 
   .contenedor__formulario {
-    margin: 0 30PX;
+    margin: 0 30px;
   }
 }
 
@@ -37,7 +36,7 @@
   }
 
   .contenedor__formulario {
-    margin: 0 20PX;
+    margin: 0 20px;
   }
 
   .contenedor__main {
@@ -50,6 +49,14 @@
 @media screen and (max-width: 550px) {
   .contenedor {
     margin: 0 20px;
+  }
+
+  .contenedor__formulario {
+    flex-direction: column;
+  }
+
+  .search-box {
+    margin: 10px 0;
   }
 
   .contenedor__main {

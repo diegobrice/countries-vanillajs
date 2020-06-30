@@ -21,7 +21,7 @@
     <section class="formulario">
       <div class="contenedor__formulario">
         <div class="search-box">
-          <form action="">
+          <form action="" id="form">
             <i class="fas fa-search"></i>
             <input
               type="text"
@@ -39,21 +39,29 @@
             <i class="fas fa-chevron-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#" class="btnFilter" id="btnAfrica" data-region="Africa"
-              >Africa</a
+            <a href="#" class="btnFilter active" id="btnAll" data-region="All">
+              All
+            </a>
+            <a href="#" class="btnFilter" id="btnAfrica" data-region="Africa">
+              Africa
+            </a>
+            <a
+              href="#"
+              class="btnFilter"
+              id="btnAmerica"
+              data-region="Americas"
             >
-            <a href="#" class="btnFilter" id="btnAmerica" data-region="Americas"
-              >America</a
-            >
-            <a href="#" class="btnFilter" id="btnAsia" data-region="Asia"
-              >Asia</a
-            >
-            <a href="#" class="btnFilter" id="btnEurope" data-region="Europe"
-              >Europe</a
-            >
-            <a href="#" class="btnFilter" id="btnOceania" data-region="Oceania"
-              >Oceania</a
-            >
+              America
+            </a>
+            <a href="#" class="btnFilter" id="btnAsia" data-region="Asia">
+              Asia
+            </a>
+            <a href="#" class="btnFilter" id="btnEurope" data-region="Europe">
+              Europe
+            </a>
+            <a href="#" class="btnFilter" id="btnOceania" data-region="Oceania">
+              Oceania
+            </a>
           </div>
         </div>
         <!-- <a href="#" id="btnFiltroAsia">Asia</a>
@@ -83,7 +91,7 @@
       <div class="contenedor">
         <p>
           Developed by
-          <a href="">
+          <a href="https://twitter.com/diegobrice" target="_blank">
             @diegobrice
           </a>
         </p>

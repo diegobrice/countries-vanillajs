@@ -9,9 +9,30 @@
 
   const countryList = await getData(`${BASE_API}all`);
 
+  function actualizarActive(e) {
+    $btnFilter.forEach((btn) => {
+      if (btn.dataset.region === e) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
+
   function filtraRegion(parametro) {
+    $dropContent.classList.toggle("display");
+    actualizarActive(parametro);
+    if (parametro === "All") return countryList;
     return countryList.filter((country) => country.region === parametro);
   }
+
+  function showDrop() {
+    $dropContent.classList.toggle("display");
+  }
+
+  const $dropBtn = document.querySelector(".dropbtn");
+  const $dropContent = document.querySelector(".dropdown-content");
+  $dropBtn.addEventListener("click", showDrop);
 
   const $btnFilter = document.querySelectorAll(".btnFilter");
   $btnFilter.forEach((btn) => {
@@ -21,19 +42,30 @@
     });
   });
 
-  // const $btnFiltroAmerica = document.getElementById("btnFiltroAmerica");
-  // $btnFiltroAmerica.addEventListener("click", () => {
-  //   const filterList = filtrar("Americas");
-  //   renderCountryList(filterList, $countryContainer);
-  // });
+  function findCountries(input) {
+    return countryList.filter((country) => {
+      const regex = new RegExp(input, "gi");
+      return (
+        country.name.match(regex) ||
+        country.subregion.match(regex) ||
+        country.region.match(regex) ||
+        country.capital.match(regex)
+      );
+    });
+  }
 
-  // const countryRegionEurope = countryList.filter(
-  //   (country) => country.region === "Europe"
-  // );
-  // console.log(countryRegionEurope);
-  // countryList.forEach((country) => {
-  //   console.log(country.region);
-  // });
+  function showCountries() {
+    event.preventDefault();
+    actualizarActive();
+    const matchCountries = findCountries(this.value);
+    renderCountryList(matchCountries, $countryContainer);
+  }
+
+  const $searchText = document.querySelector("#search-text");
+  $searchText.addEventListener("change", showCountries);
+  $searchText.addEventListener("keyup", showCountries);
+  const $form = document.querySelector("#form");
+  $form.addEventListener("submit", () => event.preventDefault());
 
   function countryTemplate(country) {
     return `
